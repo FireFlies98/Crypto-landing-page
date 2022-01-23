@@ -1,0 +1,11 @@
+@mixin h3 {
+    font-size: 40px;
+    line-height: 48px;
+    font-family: $font-playfair-display;
+}
+
+@mixin p {
+    line-height: 26px;
+    font-weight: 300;
+    opacity: .8;
+}

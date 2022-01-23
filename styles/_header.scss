@@ -4,6 +4,15 @@
     min-height: 119vh;
 }
 
+// .wrap {
+//     background: url(../images/header-background.png) no-repeat;
+//     background-size: cover;
+//     min-height: 100%;
+//     min-width: 1440px;
+//     width: 100%;
+//     height: auto;
+// }
+
 .header-box {
     padding-top: 31px;
     margin-bottom: 9.3em;
@@ -72,9 +81,9 @@
 }
 
 .header-introduction__text {
-    font-weight: 300;
-    line-height: 26px;
     margin-bottom: 48px;
+
+    @include p;
 }
 
 .header-introduction__button {
@@ -87,12 +96,12 @@
 }
 
 .button-background {
-    width: 112px;
+    width: 5.4em;
     height: 13px;
     background-color: #F1897B;
     z-index: 1;
     opacity: .3;
     position: relative;
-    bottom: 9px;
+    top: 25px;
     left: 11px;
 }
