@@ -182,4 +182,32 @@ a {
   bottom: 9px;
   left: 11px;
 }
+
+.main-section__one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section__one--image {
+  position: relative;
+  bottom: 165px;
+  width: 52.2%;
+  height: 38em;
+  margin-left: 67px;
+}
+
+.section-one__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 83%;
+  height: 31em;
+  position: relative;
+  opacity: .9;
+  z-index: 1;
+  right: 155px;
+  background: #FFFFFF;
+  bottom: 111px;
+}
 /*# sourceMappingURL=styles.css.map */

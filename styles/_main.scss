@@ -1,0 +1,30 @@
+.main-section__one {
+    display: flex;
+    // background: linear-gradient(rgba(255, 255, 255, 0) rgba(255, 255, 255, 1));
+}
+
+.section__one--image {
+    position: relative;
+    bottom: 165px;
+    width: 52.2%;
+    height: 38em;
+    margin-left: 67px;
+}
+
+// .section__one--image-city {
+//     width: 100%;
+//     height: auto;
+//     // background-size: cover;
+// }
+
+.section-one__rating {
+    display: flex;
+    width: 83%;
+    height: 31em;
+    position: relative;
+    opacity: .9;
+    z-index: 1;
+    right: 155px;
+    background: #FFFFFF;
+    bottom: 111px;
+}
