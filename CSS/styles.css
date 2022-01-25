@@ -69,6 +69,7 @@ a {
   background: url(../images/header-background.png) no-repeat;
   background-size: cover;
   min-height: 119vh;
+  box-shadow: 30px 29px 130px 50px rgba(245, 251, 252, 0.911);
 }
 
 .header-box {
@@ -180,6 +181,7 @@ a {
 
 .section__one--image-city {
   background-size: cover;
+  box-shadow: 0px 15px 25px 60px rgba(247, 252, 252, 0.973);
 }
 
 .section-one__rating {
@@ -295,6 +297,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 86px;
+  margin-bottom: 17vh;
 }
 
 .box-body {
@@ -318,6 +321,109 @@ a {
 
 .box-body__text-one {
   margin-bottom: 50px;
+}
+
+.main-section__three {
+  max-width: 90%;
+  margin: auto;
+}
+
+.section__three--images {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.section__three--images-background {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section__three--images-quote {
+  position: absolute;
+  bottom: 34vh;
+  left: 10vw;
+}
+
+.section__three--title {
+  display: grid;
+  font-size: 2vw;
+  line-height: 46px;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  position: relative;
+  bottom: 41vh;
+  left: 14vw;
+}
+
+.section__three--subtitle {
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  font-family: "Playfair Display";
+  color: #FFFFFF;
+  position: relative;
+  bottom: 32vh;
+  left: 14vw;
+  font-style: italic;
+}
+
+.main-section__four {
+  display: flex;
+  flex-direction: column;
+  max-width: 62.5%;
+  margin: auto;
+  margin-bottom: 6.7em;
+}
+
+.section__four--body {
+  width: 50em;
+  height: 30em;
+  border: 1px solid #E4E4E4;
+  box-sizing: border-box;
+  border-radius: 32px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.section__four--circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #E4E4E4;
+  margin: 0 8px 0 8px;
+}
+
+.section__four--video {
+  width: 45.1em;
+  height: 27.9em;
+  opacity: 0.2;
+  border: 1px solid #E4E4E4;
+  border-radius: 8px;
+}
+
+.section__four--box {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #E4E4E4;
+  margin-left: 14px;
+}
+
+.section__four--title {
+  margin-bottom: 0.5em;
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "Playfair Display";
+}
+
+.section__four--text {
+  line-height: 26px;
+  font-weight: 300;
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=styles.css.map */

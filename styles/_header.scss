@@ -2,16 +2,10 @@
     background: url(../images/header-background.png) no-repeat;
     background-size: cover;
     min-height: 119vh;
+    // -webkit-box-shadow: 12px 29px 81px 0px rgba(248, 251, 250, 0.911);
+    // -moz-box-shadow: 12px 29px 81px 0px rgba(245, 251, 252, 0.911);
+    box-shadow: 30px 29px 130px 50px rgba(245, 251, 252, 0.911);
 }
-
-// .wrap {
-//     background: url(../images/header-background.png) no-repeat;
-//     background-size: cover;
-//     min-height: 100%;
-//     min-width: 1440px;
-//     width: 100%;
-//     height: auto;
-// }
 
 .header-box {
     padding-top: 31px;
