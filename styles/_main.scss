@@ -1,24 +1,53 @@
 .main-section__one {
     display: flex;
+
+    @include ladtop {
+        display: grid;
+        max-height: 800px;
+    }
+
+    @include phone {
+        max-height: 570px;
+    }
 }
 
 .section__one--image {
     position: relative;
     bottom: 165px;
-    width: 52.2%;
-    height: 38em;
-    margin-left: 67px;
+    width: 31.4em;
+    height: 37.8em;
+    margin-left: 3.7em;
     background-size: cover;
+
+    @include ladtop {
+        position: static;
+        margin-left: 5.55em;
+    }
+
+    @include phone {
+        margin-left: 0;
+        height: 30em;
+    }
 }
 
 .section__one--image-city {
     background-size: cover;
     box-shadow: 0px 15px 25px 60px rgba(247, 252, 252, 0.973);
+
+    @include ladtop {
+        box-shadow: 0px 0px 70px 120px rgba(247, 250, 249, 0.973);
+    }
+
+    @include phone {
+        width: 24em;
+        height: 28em;
+        box-shadow: none;
+    }
 }
 
 .section-one__rating {
     display: flex;
-    width: 83%;
+    width: 48em;
     height: 32em;
     position: relative;
     opacity: .9;
@@ -26,11 +55,30 @@
     right: 155px;
     background: #FFFFFF;
     bottom: 118px;
+
+    @include ladtop {
+        display: grid;
+        width: 31.5em;
+        height: 37.8em;
+        left: 5.55em; 
+        bottom: 37.8em;
+    }
+
+    @include phone {
+        width: 24em;
+        height: 28em;
+        left: 0;
+        bottom: 30em;
+    }
 }
 
 .rating-box {
     margin-left: 61px;
     margin-top: 33px;
+
+    @include ladtop {
+        display: none;
+    }
 }
 
 .rating-box__title {
@@ -83,11 +131,20 @@
 .rating-inner {
     margin-top: 2.3em;
     margin-left: 6em;
+
+    @include phone {
+        margin-left: 5em;
+        margin-top: 1.7em
+    }
 }
 
 .rating-inner__text {
     
     @include p;
+
+    @include phone {
+        font-size: 14px;
+    }
 }
 
 .inner__text--one {
@@ -127,7 +184,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 86px;
-    margin-bottom: 17vh;
+    margin-bottom: 7.8em;
+
+    @include ladtop {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        margin-bottom: 6em;
+    }
 }
 
 .box-body {
@@ -138,21 +201,46 @@
 
 .box-body__title {
     margin-bottom: 24px;
+
     @include h3;
+
+    @include ladtop {
+        margin-bottom: 12px;
+        font-size: 20px;
+        line-height: 24px;
+    }
 }
 
 .box-body__text {
     
     @include p;
+
+    @include ladtop {
+        font-size: 14px;
+        line-height: 18px;
+        .br {
+            display: none;
+        }
+    }
 }
 
 .box-body__text-one {
     margin-bottom: 50px;
+
+    @include ladtop {
+        margin-bottom: 30px;
+    }
+
+    @include phone {
+        margin-bottom: 0;
+    }
 }
 
 .main-section__three {
     max-width: 90%;
     margin: auto;
+
+    
 }
 
 .section__three--images {
@@ -169,19 +257,46 @@
 
 .section__three--images-quote {
     position: absolute;
-    bottom: 34vh;
-    left: 10vw;
+    bottom: 15.5em;
+    left: 7.5em;
+
+    @include ladtop {
+        width: 3em;
+        height: auto;
+        left: 3em;
+        bottom: 9em;
+    }
+
+    @include phone {
+        width: 1.5em;
+        height: auto;
+        left: 2em;
+        bottom: 5em;
+    }
 }
 
 .section__three--title {
     display: grid;
-    font-size: 2vw;
+    font-size: 32px;
     line-height: 46px;
     letter-spacing: .04em;
     color: #FFFFFF;
     position: relative;
-    bottom: 41vh;
-    left: 14vw;
+    bottom: 10.4em;
+    left: 6.1em;
+
+    @include ladtop {
+        font-size: 18px;
+        line-height: 24px;
+        left: 4.8em;
+    }
+
+    @include phone {
+        font-size: 12px;
+        line-height: 16px;
+        left: 4.2em;
+        bottom: 8.8em;
+    }
 }
 
 .section__three--subtitle {
@@ -191,9 +306,22 @@
     font-family: $font-playfair-display;
     color: #FFFFFF;
     position: relative;
-    bottom: 32vh;
-    left: 14vw;
+    bottom: 13em;
+    left: 10em;
     font-style: italic;
+
+    @include ladtop {
+        font-size: 14px;
+        line-height: 18px;
+        left: 6.3em;
+        bottom: 11em;
+    }
+
+    @include phone {
+        font-size: 10px;
+        left: 5em;
+        bottom: 9.5em;
+    }
 }
 
 .main-section__four {
@@ -202,6 +330,15 @@
     max-width: 62.5%;
     margin: auto;
     margin-bottom: 6.7em;
+
+    @include ladtop {
+        max-width: 83%;
+        margin-bottom: 3em;
+    }
+    @include phone {
+        max-width: 95%;
+        margin-bottom: 0;
+    }
 }
 
 .section__four--body {
@@ -214,6 +351,18 @@
     display: flex;
     align-items: center;
     margin-bottom: 3em;
+
+    @include ladtop {
+        width: 32em;
+        height: 18em;
+        border-radius: 20px;
+    }
+
+    @include phone {
+        flex-direction: column;
+        width: 20em;
+        height: 30em;
+    }
 }
 
 .section__four--circle {
@@ -222,6 +371,15 @@
     border-radius: 50%;
     border: 1px solid #E4E4E4;
     margin: 0 8px 0 8px;
+
+    @include ladtop {
+        width: 8px;
+        height: 8px;
+    }
+
+    @include phone {
+        margin: 5px 0 5px;
+    }
 }
 
 .video-box {
@@ -236,6 +394,17 @@
     opacity: .2;
     border: 1px solid #E4E4E4;
     border-radius: 8px;
+
+    @include ladtop {
+        width: 27.5em;
+        height: 16em;
+    }
+
+    @include phone {
+        width: 19em;
+        height: 26.5em;
+        background: rgba(133, 187, 177, .5);
+    }
 }
 
 .video-button {
@@ -248,6 +417,19 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    @include ladtop {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.treangel {
+
+    @include ladtop {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .video-button:hover {
@@ -266,15 +448,51 @@
     border-radius: 50%;
     border: 1px solid #E4E4E4;
     margin-left: 14px;
+
+    @include ladtop {
+        width: 24px;
+        height: 24px;
+    }
+
+    @include phone {
+        margin-top: 7px;
+    }
 }
 
 .section__four--title {
     margin-bottom: .5em;
 
+    @include ladtop {
+        font-size: 34px;
+        line-height: 38px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @include phone {
+        font-size: 28px;
+        margin-left: 5px;
+    }
+
     @include h3
 }
 
 .section__four--text {
+
+    @include ladtop {
+
+        br {
+            display: none;
+        }
+    }
+
+    @include phone {
+        font-size: 14px;
+        margin-left: 5px;
+        line-height: 22px;
+    }
 
     @include p
 }
@@ -285,11 +503,23 @@
     display: flex;
     max-height: 30.5em;
     margin-bottom: 8.3em;
+
+    @include ladtop {
+        margin-bottom: 3em;
+    }
+
+    @include phone {
+        flex-direction: column;
+    }
 }
 
 .five--sidebar__beckground {
     width: 31.4em;
     height: 30em;
+
+    @include ladtop {
+        visibility: hidden;
+    }
 }
 
 .section__five--widget {
@@ -300,6 +530,15 @@
     position: relative;
     left: 4.2em;
     bottom: 24.2em;
+
+    @include ladtop {
+        left: 2em;
+        z-index: 1;
+    }
+
+    @include phone {
+        left: 4em;
+    }
 }
 
 .widget--currency {
@@ -498,6 +737,43 @@
     color: rgba(255, 255, 255, .6);
 }
 
+// .widget--footer__input {
+// 	display: none;
+// }
+
+// .widget--footer__label {
+//     display: inline-block;
+// 	cursor: pointer;
+// 	position: relative;
+// 	padding-left: 25px;
+// 	margin-right: 0;
+// 	line-height: 18px;
+// 	user-select: none;
+// }
+
+// .widget--footer__label::before {
+//     content: "";
+// 	display: inline-block;
+// 	width: 17px;
+// 	height: 18px;
+// 	position: absolute;
+// 	left: 0;
+// 	bottom: 1px;
+// 	background: url(https://snipp.ru/img/radio-1.png) 0 0 no-repeat;
+// }
+
+// .widget--footer__input:checked + .widget--footer__label::before {
+//     background: url(https://snipp.ru/img/radio-2.png) 0 0 no-repeat;
+// }
+
+// .widget--footer__label:hover::before {
+//     filter: brightness(120%);
+// }
+
+// .widget--footer__input:disabled + .widget--footer__label::before {
+//     filter: grayscale(100%);
+// }
+
 .section__five--aside {
     width: 42.3em;
     height: 25.1em;
@@ -507,6 +783,17 @@
     top: 2.2em;
     display: flex;
     flex-direction: column;
+
+    @include ladtop {
+        height: 17em;
+        width: 100%;
+        right: 14em;
+        align-items: flex-end;
+    }
+
+    @include phone {
+        display: none;
+    }
 }
 
 .five--aside__box {
@@ -514,14 +801,29 @@
     margin-top: 4em;
     margin-left: 3.5em;
     width: 100%;
+
+    @include ladtop {
+        flex-direction: column;
+        margin-top: 0;
+        margin-left: 10em;
+    }
 }
 
 .five--aside__inner {
     margin-right: 10em;
+
+    @include ladtop {
+        margin-right: 0;
+        margin-top: 3.5em;
+    }
 }
 
 .five--aside__inner-two {
     margin-right: 7.6em;
+
+    @include ladtop {
+        margin-right: 0;
+    }
 }
 
 .aside__inner--title {
@@ -530,15 +832,38 @@
     font-family: $font-playfair-display;
     color: #262A3F;
     margin-bottom: 14px;
+
+    @include ladtop {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 6px;
+        margin-top: 1em;
+
+        br {
+            display: none;
+        }
+    }
 }
 
 .aside__inner--text {
+
+    @include ladtop {
+        font-size: 16px;
+        line-height: 18px;
+        br {
+            display: none;
+        }
+    }
     
     @include p
 }
 
 .inner--text__margin {
     margin-bottom: 13px;
+
+    @include ladtop {
+        margin-bottom: 4px;
+    }
 }
 
 .five--aside__button {
@@ -549,6 +874,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include ladtop {
+        width: 8em;
+        height: 2em;
+        margin-top: 1em;
+
+        a {
+            font-size: 12px;
+
+            div {
+                display: none;
+            }
+        }
+    }
 }
 
 .five--aside__button:hover {
@@ -567,20 +906,45 @@
         width: 0px;
         background: transparent; 
     }
+
+    @include ladtop {
+        grid-template-columns: 19em 1fr 1fr 1fr;
+        margin-bottom: 2em;
+    }
+
+    @include phone {
+        grid-template-columns: none;
+        margin-bottom: 0;
+    }
 }
 
 .section__six--sidebar {
     margin-left: 3.7em;
+
+    @include ladtop {
+        margin-left: 2em;
+    }
 }
 
 .six--sidebar__title {
     margin-bottom: 1.1em;
+
+    @include ladtop {
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: .5em;
+    }
 
     @include h3
 }
 
 .six--sidebar__text {
     margin-bottom: 7.4em;
+
+    @include ladtop {
+        font-size: 14px;
+        line-height: 20px;
+    }
 
     @include p
 }
@@ -591,16 +955,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include ladtop {
+        width: 15em;
+    }
+
+    @include phone {
+        display: none;
+    }
 }
 
 .sidebar__box--text {
     font-size: 24px;
     line-height: 48px;
     font-family: $font-playfair-display;
+
+    @include ladtop {
+        font-size: 20px;
+        line-height: 34px;
+    }
     
     span {
         font-size: 40px;
         line-height: 48px;
+
+        @include ladtop {
+            font-size: 30px;
+            line-height: 36px;
+        }
     }
 }
 
@@ -610,11 +992,19 @@
     opacity: 0.1;
     margin-right: 1em;
     cursor: pointer;
+
+    @include ladtop {
+        font-size: 26px;
+    }
 }
 
 .sidebar__box--arow-right {
     font-size: 30px;
     color: #85BBB1;
+
+    @include ladtop {
+        font-size: 26px;
+    }
 }
 
 .sidebar__box--arow-right:hover {
@@ -624,14 +1014,32 @@
 
 .section__six--card {
     margin-right: 1.1em;
+
+    @include ladtop {
+        margin-right: .8em;
+    }
 }
 
 .six--card__container {
     height: 18.6em;
+
+    @include phone {
+        height: 15em;
+        margin-left: 1.8em;
+    }
 }
 
 .six--card__image {
     width: 26em;
+
+    @include ladtop {
+        width: 20em;
+    }
+
+    @include phone {
+        position: relative;
+        bottom: 4.15em;
+    }
 }
 
 .six--card__box {
@@ -642,6 +1050,14 @@
     bottom: 334px;
     z-index: 1;
     cursor: pointer;
+
+    @include ladtop {
+        width: 20em;
+    }
+
+    @include phone {
+        height: 14.3em;
+    }
 }
 
 .six--card__text {
@@ -650,6 +1066,16 @@
     color: rgba(255, 255, 255, .8);
     margin-left: 2.6em;
     padding-top: 2.8em;
+
+    @include ladtop {
+        font-size: 12px;
+        line-height: 20px;
+        padding-top: 9em;
+    }
+
+    @include phone {
+        padding-top: 3em;
+    }
 }
 
 .six--card__autor {
@@ -661,6 +1087,10 @@
     font-style: italic;
     margin-left: 2.3em;
     padding-top: 1.8em;
+
+    @include ladtop {
+        font-size: 16px;
+    }
 }
 
 .autor-text {

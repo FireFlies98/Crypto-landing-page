@@ -9,3 +9,27 @@
     font-weight: 300;
     opacity: .8;
 }
+
+@mixin desktop {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin mini-desktop {
+    @media (max-width: $mini-desktop) {
+        @content;
+    }
+}
+
+@mixin ladtop {
+    @media (max-width: $ladtop) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: $phone) {
+        @content;
+    }
+}
