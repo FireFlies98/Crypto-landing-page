@@ -8,6 +8,7 @@
 
     @include mini-desktop {
         min-height: 100vh;
+        padding-bottom: 9em;
     }
 
     @include ladtop {
@@ -51,6 +52,10 @@
     justify-content: end;
     margin-right: 40px;
 
+    @include mini-desktop {
+        margin-right: 25px;
+    }
+
     @include ladtop {
         display: none;
     }
@@ -58,8 +63,8 @@
 
 .header_navigation--list__item {
     margin-left: 32px;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: $a-font-size-14;
+    line-height: $a-line-height-24;
     letter-spacing: 0.08em;
     font-family: $font-lato;
 }
@@ -89,20 +94,24 @@
     }
 }
 
+.header-dark:hover {
+    background: rgba(0, 0, 0, .6);
+}
+
 .header-introduction {
     width: 90%;
     margin: auto;
 }
 
 .header-introduction__title {
-    font-size: 44px;
-    line-height: 52px;
+    font-size: $h1-font-size-44;
+    line-height: $h1-line-height-52;
     font-family: $font-playfair-display;
     margin-bottom: 24px;
 
     @include phone {
-        font-size: 30px;
-        line-height: 46px;
+        font-size: $h1-font-size-30;
+        line-height: $h1-line-height-46;
     }
 }
 
@@ -117,18 +126,20 @@
     @include p;
 
     @include phone {
-        font-size: 14px;
+        font-size: $p-font-size-14;
         margin-bottom: 34px;
     }
 }
 
 .header-introduction__button {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: .08em;
     color: #F1897B;
     z-index: 2;
+
+    @include a
+}
+
+.header-introduction__button:hover {
+    opacity: $a-opacity-08;
 }
 
 .button-background {
@@ -158,6 +169,10 @@
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
     transition-duration: .5s;
     opacity: .7;
+
+    @include phone {
+        opacity: .9;
+    }
 }
 
 .mobile--navigation {
@@ -172,7 +187,7 @@
     display: block;
     margin: 7px 0;
     color: #000000;
-    font-size: 14px;
+    font-size: $a-font-size-14;
     text-decoration: none;
     transition-duration: .5s;
 }

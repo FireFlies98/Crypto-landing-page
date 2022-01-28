@@ -1,13 +1,20 @@
 @mixin h3 {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: $h3-font-size-40;
+    line-height: $h3-line-height-48;
     font-family: $font-playfair-display;
 }
 
 @mixin p {
-    line-height: 26px;
-    font-weight: 300;
-    opacity: .8;
+    line-height: $p-line-height-26;
+    font-weight: $p-font-weight-300;
+    opacity: $p-opacity-08;
+}
+
+@mixin a {
+    font-size: $a-font-size-20;
+    line-height: $a-line-height-20;
+    font-weight: $a-font-weight-700;
+    letter-spacing: .08em;
 }
 
 @mixin desktop {

@@ -10,6 +10,10 @@
     justify-content: space-between;
     padding-bottom: 6.6em;
 
+    @include mini-desktop {
+        padding-bottom: 4em;
+    }
+
     @include ladtop {
         padding-bottom: 3em;
     }
@@ -23,6 +27,10 @@
 .footer-body__content {
     margin-top: 6.6em;
 
+    @include mini-desktop {
+        margin-top: 5em;
+    }
+
     @include ladtop {
         margin-top: 3em;
     }
@@ -35,8 +43,12 @@
 .footer-body__content_title {
     margin-bottom: .6em;
 
+    @include mini-desktop {
+        font-size: $h3-font-size-34;
+    }
+
     @include ladtop {
-        font-size: 30px;
+        font-size: $h3-font-size-30;
     }
 
     @include h3
@@ -44,9 +56,13 @@
 
 .footer-body__content_text {
 
+    @include mini-desktop {
+        font-size: $p-font-size-16;
+        line-height: $p-line-height-20;
+    }
+
     @include ladtop {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: $p-font-size-14;
     }
 
     @include p
@@ -54,6 +70,10 @@
 
 .footer-body__form {
     margin-top: 7em;
+
+    @include mini-desktop {
+        margin-top: 5.5em;
+    }
 
     @include ladtop {
         margin-top: 3em;
@@ -63,8 +83,8 @@
 .footer-body__form-item {
     width: 26em;
     height: 2.4em;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: $input-font-size-18;
+    line-height: $input-line-height-26;
     letter-spacing: .08em;
     color: rgba(38, 42, 63, .5);
     font-family: $font-playfair-display;
@@ -75,10 +95,14 @@
     padding-left: 2px;
     margin-bottom: 1.5em;
 
+    @include mini-desktop {
+        width: 22em;
+    }
+
     @include ladtop {
         width: 17em;
         height: 2em;
-        font-size: 16px;
+        font-size: $input-font-size-16;
     }
 
     @include phone {
@@ -91,10 +115,6 @@
 }
 
 .form-btn {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: .08em;
     color: #F1897B;
     z-index: 2;
     border: none;
@@ -103,8 +123,10 @@
     cursor: pointer;
 
     @include ladtop {
-        font-size: 18px;
+        font-size: $a-font-size-18;
     }
+
+    @include a
 }
 
 .form-btn-background {
@@ -137,40 +159,52 @@
 }
 
 .footer-aside__text {
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: 300;
+    font-size: $p-font-size-14;
+    line-height: $p-line-height-26;
+    font-weight: $p-font-weight-300;
     opacity: .6;
     br {
-        visibility: hidden;
+        display: none;
+    }
+
+    @include mini-desktop {
+        font-size: $p-font-size-10;
+
+        br {
+            display: none;
+        }
     }
 
     @include ladtop {
-        font-size: 10px;
+
+        br {
+            display: none;
+        }
     }
 
     @include phone {
-        font-size: 8px;
-        line-height: 10px;
+        font-size: $p-font-size-8;
+        line-height: $p-line-height-10;
 
         br {
             visibility: visible;
+            display: block;
         }
     }
 }
 
 .footer-aside__excerpt {
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: 300;
+    font-size: $p-font-size-14;
+    line-height: $p-line-height-26;
+    font-weight: $p-font-weight-300;
     color: rgba(38, 42, 63, .6);
 
-    @include ladtop {
-        font-size: 10px;
+    @include mini-desktop {
+        font-size: $p-font-size-10;
     }
 
     @include phone {
-        font-size: 8px;
+        font-size: $p-font-size-8;
     }
 }
 
@@ -183,17 +217,17 @@
 }
 
 .footer-aside__link {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: $p-font-size-14;
+    line-height: $p-line-height-26;
     letter-spacing: .08em;
     color: #262A3F;
     margin-left: 1.7em;
 
-    @include ladtop {
-        font-size: 10px;
+    @include mini-desktop {
+        font-size: $p-font-size-10;
     }
 
     @include phone {
-        font-size: 8px;
+        font-size: $p-font-size-8;
     }
 }

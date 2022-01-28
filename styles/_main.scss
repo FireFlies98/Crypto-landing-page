@@ -19,6 +19,11 @@
     margin-left: 3.7em;
     background-size: cover;
 
+    @include mini-desktop {
+        position: absolute;
+        top: 40.5em;
+    }
+
     @include ladtop {
         position: static;
         margin-left: 5.55em;
@@ -56,6 +61,12 @@
     background: #FFFFFF;
     bottom: 118px;
 
+    @include mini-desktop {
+        width: 48em;
+        right: 0;
+        left: 5em;
+    }
+
     @include ladtop {
         display: grid;
         width: 31.5em;
@@ -92,8 +103,8 @@
 }
 
 .box__title {
-    font-size: 68px;
-    line-height: 72px;
+    font-size: $h2-font-size-68;
+    line-height: $h2-line-height-72;
     font-family: $font-playfair-display;
 }
 
@@ -156,12 +167,14 @@
 }
 
 .rating-inner__button {
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 700;
-    letter-spacing: .08em;
     color: rgba(241, 137, 123, 1);
     z-index: 2;
+
+    @include a
+}
+
+.rating-inner__button:hover {
+    opacity: $a-opacity-08;
 }
 
 .inner__button--background {
@@ -186,6 +199,11 @@
     gap: 86px;
     margin-bottom: 7.8em;
 
+    @include mini-desktop {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        margin-top: 1em;
+    }
+
     @include ladtop {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 40px;
@@ -206,8 +224,8 @@
 
     @include ladtop {
         margin-bottom: 12px;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: $h3-font-size-20;
+        line-height: $h3-line-height-24;
     }
 }
 
@@ -215,9 +233,15 @@
     
     @include p;
 
+    @include mini-desktop {
+        br {
+            display: none;
+        }
+    }
+
     @include ladtop {
-        font-size: 14px;
-        line-height: 18px;
+        font-size: $p-font-size-14;
+        line-height: $p-line-height-18;
         .br {
             display: none;
         }
@@ -239,8 +263,6 @@
 .main-section__three {
     max-width: 90%;
     margin: auto;
-
-    
 }
 
 .section__three--images {
@@ -260,6 +282,13 @@
     bottom: 15.5em;
     left: 7.5em;
 
+    @include mini-desktop {
+        width: 4em;
+        height: auto;
+        left: 4em;
+        bottom: 12.5em;
+    }
+
     @include ladtop {
         width: 3em;
         height: auto;
@@ -277,31 +306,38 @@
 
 .section__three--title {
     display: grid;
-    font-size: 32px;
-    line-height: 46px;
+    font-size: $h4-font-size-32;
+    line-height: $h4-line-height-46;
     letter-spacing: .04em;
     color: #FFFFFF;
     position: relative;
     bottom: 10.4em;
     left: 6.1em;
 
+    @include mini-desktop {
+        font-size: $h4-font-size-26;
+        line-height: $h4-line-height-36;
+        left: 4.4em;
+        bottom: 10em;
+    }
+
     @include ladtop {
-        font-size: 18px;
-        line-height: 24px;
+        font-size: $h4-font-size-18;
+        line-height: $h4-line-height-24;
         left: 4.8em;
     }
 
     @include phone {
-        font-size: 12px;
-        line-height: 16px;
+        font-size: $h4-font-size-12;
+        line-height: $h4-line-height-16;
         left: 4.2em;
         bottom: 8.8em;
     }
 }
 
 .section__three--subtitle {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: $p-font-size-20;
+    line-height: $p-line-height-20;
     letter-spacing: .08em;
     font-family: $font-playfair-display;
     color: #FFFFFF;
@@ -310,15 +346,21 @@
     left: 10em;
     font-style: italic;
 
+    @include mini-desktop {
+        font-size: $p-font-size-18;
+        left: 6.5em;
+        bottom: 12em;
+    }
+
     @include ladtop {
-        font-size: 14px;
-        line-height: 18px;
+        font-size: $p-font-size-14;
+        line-height: $p-line-height-18;
         left: 6.3em;
         bottom: 11em;
     }
 
     @include phone {
-        font-size: 10px;
+        font-size: $p-font-size-10;
         left: 5em;
         bottom: 9.5em;
     }
@@ -330,6 +372,10 @@
     max-width: 62.5%;
     margin: auto;
     margin-bottom: 6.7em;
+
+    @include mini-desktop {
+        max-width: 85%;
+    }
 
     @include ladtop {
         max-width: 83%;
@@ -351,6 +397,11 @@
     display: flex;
     align-items: center;
     margin-bottom: 3em;
+
+    @include mini-desktop {
+        width: 40em;
+        height: 25em;
+    }
 
     @include ladtop {
         width: 32em;
@@ -395,6 +446,11 @@
     border: 1px solid #E4E4E4;
     border-radius: 8px;
 
+    @include mini-desktop {
+        width: 35em;
+        height: 23em;
+    }
+
     @include ladtop {
         width: 27.5em;
         height: 16em;
@@ -417,6 +473,11 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    @include mini-desktop {
+        width: 100px;
+        height: 100px;
+    }
 
     @include ladtop {
         width: 70px;
@@ -462,9 +523,13 @@
 .section__four--title {
     margin-bottom: .5em;
 
+    @include mini-desktop {
+        margin-left: 1.8em;
+    }
+
     @include ladtop {
-        font-size: 34px;
-        line-height: 38px;
+        font-size: $h3-font-size-34;
+        line-height: $h3-line-height-38;
 
         br {
             display: none;
@@ -472,7 +537,7 @@
     }
 
     @include phone {
-        font-size: 28px;
+        font-size: $h3-font-size-28;
         margin-left: 5px;
     }
 
@@ -481,6 +546,10 @@
 
 .section__four--text {
 
+    @include mini-desktop {
+        margin-left: 3em;
+    }
+
     @include ladtop {
 
         br {
@@ -489,9 +558,9 @@
     }
 
     @include phone {
-        font-size: 14px;
+        font-size: $p-font-size-14;
         margin-left: 5px;
-        line-height: 22px;
+        line-height: $p-line-height-22;
     }
 
     @include p
@@ -659,7 +728,7 @@
 }
 
 .input-token {
-    background-image: url(../images/Vector\ \(1\).svg);
+    background-image: url(../images/Vector_two.svg);
     background-repeat: no-repeat;
     background-position: 5em;
 }
@@ -784,6 +853,11 @@
     display: flex;
     flex-direction: column;
 
+    @include mini-desktop {
+        width: 40em;
+        height: 25em;
+    }
+
     @include ladtop {
         height: 17em;
         width: 100%;
@@ -802,6 +876,11 @@
     margin-left: 3.5em;
     width: 100%;
 
+    @include mini-desktop {
+        margin-top: 3em;
+        margin-left: 2em;
+    }
+
     @include ladtop {
         flex-direction: column;
         margin-top: 0;
@@ -812,6 +891,10 @@
 .five--aside__inner {
     margin-right: 10em;
 
+    @include mini-desktop {
+        margin-right: 3em;
+    }
+
     @include ladtop {
         margin-right: 0;
         margin-top: 3.5em;
@@ -821,21 +904,29 @@
 .five--aside__inner-two {
     margin-right: 7.6em;
 
+    @include mini-desktop {
+        margin-right: 3em;
+    }
+
     @include ladtop {
         margin-right: 0;
     }
 }
 
 .aside__inner--title {
-    font-size: 24px;
-    line-height: 48px;
+    font-size: $h5-font-size-24;
+    line-height: $h5-line-height-48;
     font-family: $font-playfair-display;
     color: #262A3F;
     margin-bottom: 14px;
 
+    @include mini-desktop {
+        font-size: $h5-font-size-20;
+        line-height: $h5-line-height-28;
+        margin-top: 1em;
+    }
+
     @include ladtop {
-        font-size: 20px;
-        line-height: 28px;
         margin-bottom: 6px;
         margin-top: 1em;
 
@@ -847,9 +938,17 @@
 
 .aside__inner--text {
 
+    @include mini-desktop{
+        font-size: $p-font-size-16;
+        line-height: $p-line-height-20;
+
+        br {
+            display: none;
+        }
+    }
+
     @include ladtop {
-        font-size: 16px;
-        line-height: 18px;
+        line-height: $p-line-height-18;
         br {
             display: none;
         }
@@ -860,6 +959,10 @@
 
 .inner--text__margin {
     margin-bottom: 13px;
+
+    @include mini-desktop {
+        margin-bottom: 10px;
+    }
 
     @include ladtop {
         margin-bottom: 4px;
@@ -874,6 +977,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include mini-desktop {
+        width: 10em;
+        height: 2.5em;
+        margin-top: 4em;
+
+        a {
+            font-size: 16px;
+
+            div {
+                display: none;
+            }
+        }
+    }
 
     @include ladtop {
         width: 8em;
@@ -907,6 +1024,11 @@
         background: transparent; 
     }
 
+    @include mini-desktop {
+        grid-template-columns: 22em 1fr 1fr 1fr;
+        margin-bottom: 5em;
+    }
+
     @include ladtop {
         grid-template-columns: 19em 1fr 1fr 1fr;
         margin-bottom: 2em;
@@ -921,6 +1043,10 @@
 .section__six--sidebar {
     margin-left: 3.7em;
 
+    @include mini-desktop {
+        margin-left: 3em;
+    }
+
     @include ladtop {
         margin-left: 2em;
     }
@@ -929,9 +1055,15 @@
 .six--sidebar__title {
     margin-bottom: 1.1em;
 
+    @include mini-desktop {
+        font-size: $h3-font-size-34;
+        line-height: $h3-line-height-38;
+        margin-bottom: .8em;
+    }
+
     @include ladtop {
-        font-size: 28px;
-        line-height: 34px;
+        font-size: $h3-font-size-28;
+        line-height: $h3-line-height-34;
         margin-bottom: .5em;
     }
 
@@ -941,9 +1073,13 @@
 .six--sidebar__text {
     margin-bottom: 7.4em;
 
+    @include mini-desktop {
+        font-size: $p-font-size-16;
+        line-height: $p-line-height-20;
+    }
+
     @include ladtop {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: $p-font-size-14;
     }
 
     @include p
@@ -956,6 +1092,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @include mini-desktop {
+        width: 16em;
+    }
+
     @include ladtop {
         width: 15em;
     }
@@ -966,44 +1106,53 @@
 }
 
 .sidebar__box--text {
-    font-size: 24px;
-    line-height: 48px;
+    font-size: $p-font-size-24;
+    line-height: $p-line-height-48;
     font-family: $font-playfair-display;
 
+    @include mini-desktop {
+        font-size: $p-font-size-22;
+        line-height: $p-line-height-34;
+    }
+
     @include ladtop {
-        font-size: 20px;
-        line-height: 34px;
+        font-size: $p-font-size-20;
     }
     
     span {
-        font-size: 40px;
-        line-height: 48px;
+        font-size: $span-font-size-40;
+        line-height: $span-line-height-48;
+
+        @include mini-desktop {
+            font-size: $span-font-size-34;
+            line-height: $span-line-height-40;
+        }
 
         @include ladtop {
-            font-size: 30px;
-            line-height: 36px;
+            font-size: $span-font-size-30;
+            line-height: $span-line-height-36;
         }
     }
 }
 
 .sidebar__box--arow-left {
-    font-size: 30px;
+    font-size: $span-font-size-30;
     color: #000000;
     opacity: 0.1;
     margin-right: 1em;
     cursor: pointer;
 
     @include ladtop {
-        font-size: 26px;
+        font-size: $span-font-size-26;
     }
 }
 
 .sidebar__box--arow-right {
-    font-size: 30px;
+    font-size: $span-font-size-30;
     color: #85BBB1;
 
     @include ladtop {
-        font-size: 26px;
+        font-size: $span-font-size-26;
     }
 }
 
@@ -1032,6 +1181,10 @@
 .six--card__image {
     width: 26em;
 
+    @include mini-desktop {
+        width: 22em;
+    }
+
     @include ladtop {
         width: 20em;
     }
@@ -1051,6 +1204,10 @@
     z-index: 1;
     cursor: pointer;
 
+    @include mini-desktop {
+        width: 22em;
+    }
+
     @include ladtop {
         width: 20em;
     }
@@ -1061,15 +1218,21 @@
 }
 
 .six--card__text {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: $p-font-size-16;
+    line-height: $p-line-height-26;
     color: rgba(255, 255, 255, .8);
     margin-left: 2.6em;
     padding-top: 2.8em;
 
+    @include mini-desktop {
+        font-size: $p-font-size-14;
+        line-height: $p-line-height-22;
+        padding-top: 6em;
+    }
+
     @include ladtop {
-        font-size: 12px;
-        line-height: 20px;
+        font-size: $p-font-size-12;
+        line-height: $p-line-height-20;
         padding-top: 9em;
     }
 
@@ -1079,8 +1242,8 @@
 }
 
 .six--card__autor {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: $p-font-size-20;
+    line-height: $p-line-height-20;
     letter-spacing: .08em;
     color: #FFFFFF;
     font-family: $font-playfair-display;
@@ -1089,7 +1252,7 @@
     padding-top: 1.8em;
 
     @include ladtop {
-        font-size: 16px;
+        font-size: $p-font-size-16;
     }
 }
 
