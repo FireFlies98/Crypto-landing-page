@@ -19,7 +19,7 @@
     }
     
     @include phone {
-        padding-bottom: 1.5em;
+        padding-bottom: 1em;
         flex-direction: column;
     }
 }
@@ -36,7 +36,7 @@
     }
 
     @include phone {
-        margin-top: 1.5em;
+        margin-top: 1em;
     }
 }
 
@@ -78,6 +78,10 @@
     @include ladtop {
         margin-top: 3em;
     }
+
+    @include phone {
+        margin-top: 2em;
+    }
 }
 
 .footer-body__form-item {
@@ -117,7 +121,6 @@
 
 .form-btn {
     color: #53F3CD;
-    z-index: 2;
     border: none;
     outline: none;
     background: none;
@@ -130,14 +133,15 @@
     @include a
 }
 
-.form-btn-background {
-    width: 10em;
+.form-btn::before {
+    content: "";
+    width: 8.5em;
     height: 13px;
     background-color: #53F3CD;
-    z-index: 1;
     opacity: .3;
+    display: flex;
     position: relative;
-    bottom: 10px;
+    top: 24px;
     left: 11px;
     cursor: pointer;
 

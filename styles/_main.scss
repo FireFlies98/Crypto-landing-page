@@ -7,7 +7,7 @@
     }
 
     @include phone {
-        max-height: 570px;
+        max-height: 500px;
     }
 }
 
@@ -31,7 +31,7 @@
 
     @include phone {
         margin-left: 0;
-        height: 30em;
+        height: 27em;
     }
 }
 
@@ -45,7 +45,7 @@
 
     @include phone {
         width: 24em;
-        height: 28em;
+        height: 25em;
         box-shadow: none;
     }
 }
@@ -90,6 +90,10 @@
     @include ladtop {
         display: none;
     }
+
+    @include phone {
+        margin-top: 6px;
+    }
 }
 
 .rating-box__title {
@@ -121,11 +125,19 @@
 .rating-text-one {
     margin-left: 2.1em;
     margin-bottom: 2.7em;
+
+    @include phone {
+        margin-bottom: 1em;
+    }
 }
 
 .rating-text-two {
     margin-left: 2em;
     margin-bottom: 2.7em;
+
+    @include phone {
+        margin-bottom: 1em;
+    }
 }
 
 .rating__text--three {
@@ -168,24 +180,24 @@
 
 .rating-inner__button {
     color: rgba(241, 137, 123, 1);
-    z-index: 2;
 
     @include a
 }
 
-.rating-inner__button:hover {
-    opacity: $a-opacity-08;
-}
-
-.inner__button--background {
+.rating-inner__button::before {
+    content: "";
     width: 8.6em;
     height: 13px;
     background-color: #F1897B;
-    z-index: 1;
     opacity: .3;
+    display: flex;
     position: relative;
     top: 23px;
     left: 11px;
+}
+
+.rating-inner__button:hover {
+    opacity: $a-opacity-08;
 }
 
 .main-section__two {
@@ -208,6 +220,10 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 40px;
         margin-bottom: 6em;
+    }
+
+    @include phone {
+        margin-bottom: 2em;
     }
 }
 
@@ -263,6 +279,10 @@
 .main-section__three {
     max-width: 90%;
     margin: auto;
+
+    @include phone {
+        height: 9em;
+    }
 }
 
 .section__three--images {
@@ -413,6 +433,7 @@
         flex-direction: column;
         width: 20em;
         height: 30em;
+        margin-bottom: 1.5em;
     }
 }
 
@@ -582,6 +603,13 @@
     }
 }
 
+.section__five--sidebar {
+    
+    @include phone {
+        height: 18em;
+    }
+}
+
 .five--sidebar__beckground {
     width: 31.4em;
     height: 30em;
@@ -607,6 +635,7 @@
 
     @include phone {
         left: 4em;
+        bottom: 29em;
     }
 }
 
@@ -1015,22 +1044,16 @@
 
 .main-section__six {
     display: grid;
-    grid-template-columns: 25.3em 1fr 1fr 1fr;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    grid-template-columns: 25.3em 1fr;
     margin-bottom: 10em;
-    &::-webkit-scrollbar {
-        width: 0px;
-        background: transparent; 
-    }
 
     @include mini-desktop {
-        grid-template-columns: 22em 1fr 1fr 1fr;
+        grid-template-columns: 22em 1fr;
         margin-bottom: 5em;
     }
 
     @include ladtop {
-        grid-template-columns: 19em 1fr 1fr 1fr;
+        grid-template-columns: 19em 1fr;
         margin-bottom: 2em;
     }
 
@@ -1049,6 +1072,10 @@
 
     @include ladtop {
         margin-left: 2em;
+    }
+
+    @include phone {
+        margin-bottom: 1em;
     }
 }
 
@@ -1082,6 +1109,10 @@
         font-size: $p-font-size-14;
     }
 
+    @include phone {
+        margin-bottom: .5em;
+    }
+
     @include p
 }
 
@@ -1101,7 +1132,7 @@
     }
 
     @include phone {
-        display: none;
+        width: 18em;
     }
 }
 
@@ -1161,6 +1192,17 @@
     opacity: .6;
 }
 
+.section__six--cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; 
+    }
+}
+
 .section__six--card {
     margin-right: 1.1em;
 
@@ -1173,7 +1215,7 @@
     height: 18.6em;
 
     @include phone {
-        height: 15em;
+        height: 11em;
         margin-left: 1.8em;
     }
 }
@@ -1237,7 +1279,7 @@
     }
 
     @include phone {
-        padding-top: 3em;
+        padding-top: 7em;
     }
 }
 
@@ -1254,8 +1296,17 @@
     @include ladtop {
         font-size: $p-font-size-16;
     }
+
+    @include phone {
+        padding-top: .4em;
+        margin-left: 2em;
+    }
 }
 
 .autor-text {
     padding-top: 3.2em;
+
+    @include phone {
+        padding-top: 1.7em;
+    }
 }

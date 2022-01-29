@@ -133,24 +133,24 @@
 
 .header-introduction__button {
     color: #53F3CD;
-    z-index: 2;
 
     @include a
 }
 
-.header-introduction__button:hover {
-    opacity: $a-opacity-08;
-}
-
-.button-background {
+.header-introduction__button::before {
+    content: "";
     width: 5.4em;
     height: 13px;
     background-color: #53F3CD;
-    z-index: 1;
     opacity: .3;
+    display: flex;
     position: relative;
     top: 25px;
     left: 11px;
+}
+
+.header-introduction__button:hover {
+    opacity: $a-opacity-08;
 }
 
 // burger menu
